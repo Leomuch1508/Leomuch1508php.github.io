@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@900&family=Open+Sans:wght@400;500;600;700;800&family=Shrikhand&family=Silkscreen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+/* ------------------Header----------------- */
+
+:root{
+    --primary-color: #040437;
+    --secondary-color: #F3F3F3;
+}
+
+.lightMode {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.lightMode p {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-color: #040437;
+    display: flex;
+    border-bottom: 1px solid #0f1c32;
+}
+
+.left-section,
+.right-section {
+    width: 100%;
+    margin-top: 3rem;
+    /* cursor: context-menu; */
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.text-section {
+    margin-bottom: 5rem;
+    margin-left: 7rem;
+    width: 45rem;
+}
+
+.title {
+    font-size: 7rem;
+    font-weight: 800;
+    color: #F3F3F3;
+    margin-bottom: -10px;
+}
+
+.description {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #F3F3F3;
+    margin-bottom: 15px;
+}
+
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section p {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #F3F3F3;
+    margin-bottom: 30px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-family: 'Silkscreen', cursive;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur;
+}
+
+.lightMode p {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.showing {
+    width: 22rem;
+    height: 27rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 4px solid black;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6)
+}
+
+.showing-image {
+    width: 19rem;
+    height: 24rem;
+    background-image: url("images/messi.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 3px solid black;
+    border-radius: 30px;
+    animation: change 30s infinite ease-in-out;
+}
+
+@keyframes change {
+    20% {
+        background-image: url("images/ronaldo.jpg");
+    }
+    40% {
+        background-image: url("images/neymar.png");
+    }
+    60% {
+        background-image: url("images/dybala.jpg");
+    }
+    80% {
+        background-image: url("images/lewa.jpg");
+    }
+    100% {
+        background-image: url("images/mbappe.jpg");
+    }
+}
+
+@media (max-width: 1100px) {
+    header {
+        height: 50rem;
+    }
+    section {
+        height: 40rem;
+    }
+    .text-section {
+        margin-left: 2rem;
+    }
+    .right-section p {
+        font-size: 2rem;
+    }
+    .showing {
+        width: 18rem;
+        height: 23rem;
+    }
+    .showing-image {
+        width: 15rem;
+        height: 20rem;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        height: 50rem;
+    }
+    .text-section {
+        margin-top: 5rem;
+        margin-left: 2rem;
+        width: 40rem;
+    }
+    .right-section p {
+        font-size: 1.5rem;
+    }
+    .showing {
+        width: 15rem;
+        height: 18rem;
+    }
+    .showing-image {
+        width: 12rem;
+        height: 15rem;
+    }
+    .title {
+        font-size: 5rem;
+    }
+    .description {
+        font-size: .9rem;
+        font-weight: 500;
+        color: #F3F3F3;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 620px) {
+    header {
+        flex-direction: column;
+    }
+    .left-section {
+        align-items: center;
+        height: 20rem;
+    }
+    .right-section {
+        margin: 0;
+        align-items: center;
+    }
+    .text-section {
+        margin: 0;
+        width: 15rem;
+        text-align: center;
+    }
+    .right-section p {
+        font-size: 2rem;
+        padding: 5px 18px;
+        margin-bottom: 1rem;
+    }
+    .showing {
+        width: 15rem;
+        height: 17rem;
+    }
+    .showing-image {
+        width: 13rem;
+        height: 15rem;
+    }
+    .title {
+        font-size: 5rem;
+    }
+    .description {
+        font-size: .8rem;
+        font-weight: 500;
+        color: #F3F3F3;
+        margin-bottom: 15px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    /* Gaya untuk Dark Mode ketika perangkat pengguna mendukungnya */
+    body {
+      background-color: #F3F3F3;
+      color: #333;
+    }
+  }
